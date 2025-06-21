@@ -47,7 +47,7 @@ def generate_images(digit, n_images=5):
     return generated
 
 def display_images(images):
-    grid = make_grid(images, nrow=5, normalize=True, range=(0, 1))
+    grid = make_grid(images, nrow=5, normalize=True)  # Removed `range=(0, 1)`
     np_image = grid.cpu().numpy().transpose((1, 2, 0)) * 255
     np_image = np.clip(np_image, 0, 255).astype(np.uint8)
 
