@@ -1,5 +1,6 @@
 torch
 torchvision
+matplotlib
 numpy
 pillow
 streamlit
